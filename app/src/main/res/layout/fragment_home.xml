@@ -46,7 +46,7 @@
                         android:id="@+id/tv_home"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/myfont"
+                        android:fontFamily="@font/base_font"
                         android:text="Home"
                         android:textColor="@color/accent"
                         android:textSize="25sp"
@@ -67,7 +67,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/myfont"
+                    android:fontFamily="@font/base_font"
                     android:text="What would you like to eat"
                     android:textColor="@color/black"
                     android:textSize="20sp"
@@ -102,7 +102,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18dp"
-                    android:fontFamily="@font/myfont"
+                    android:fontFamily="@font/base_font"
                     android:text="over popular items"
                     android:textColor="@color/black"
                     android:textSize="20sp"
@@ -116,6 +116,8 @@
                     android:layout_height="120dp"
                     android:layout_marginStart="25dp"
                     android:layout_marginEnd="10dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="horizontal"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_over_pup_items" />
 
@@ -124,7 +126,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/myfont"
+                    android:fontFamily="@font/base_font"
                     android:text="category"
                     android:textColor="@color/black"
                     android:textSize="20sp"
@@ -150,6 +152,8 @@
                         android:id="@+id/recycler_view"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:orientation="vertical"
                         android:scrollbars="none" />
                 </androidx.cardview.widget.CardView>
             </androidx.constraintlayout.widget.ConstraintLayout>
