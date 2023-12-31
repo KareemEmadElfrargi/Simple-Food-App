@@ -1,10 +1,11 @@
-package com.example.food_app
+package com.example.food_app.actiivty
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
+import com.example.food_app.R
 import com.example.food_app.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val bottomNavigation = binding.buttomNav
-        navController = Navigation.findNavController(this,R.id.hostFragment)
+        navController = Navigation.findNavController(this, R.id.hostFragment)
         NavigationUI.setupWithNavController(bottomNavigation,navController)
 
 
