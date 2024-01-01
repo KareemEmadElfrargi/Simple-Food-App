@@ -55,3 +55,11 @@ o
 ?app/src/main/java/com/example/food_app/actiivty/MealActivity.kt,c\8\c8d6cc91b4e69fe70e5fc09db35d7a4aabd107d7
 q
 Aapp/src/main/java/com/example/food_app/viewModel/MealViewModel.kt,d\d\dd85b58b9460cb6cd3c6e1d4aaba4d48b77b1c92
+†
+Vapp/src/main/java/com/example/food_app/actiivty/Adapters/MostPopularRecyclerAdapter.kt,8\f\8f0bc957371752cf5cdae9694564b466b99ca034
+d
+4app/src/main/java/com/example/food_app/pojo/MealX.kt,6\2\62821439df6bbafe4cb4c120660bb62b7a951479
+l
+<app/src/main/java/com/example/food_app/pojo/CategoryMeals.kt,b\a\babf685ddac842592f6709151873474f79123c28
+k
+;app/src/main/java/com/example/food_app/pojo/CategoryList.kt,8\b\8bcbf377d95353f22326c80b68440c2b17ae16da

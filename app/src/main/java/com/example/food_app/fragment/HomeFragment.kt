@@ -12,8 +12,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
+import com.example.easyfood.adapters.MostPopularRecyclerAdapter
 import com.example.food_app.actiivty.MealActivity
 import com.example.food_app.databinding.FragmentHomeBinding
+import com.example.food_app.pojo.CategoryMeals
 import com.example.food_app.pojo.Meal
 
 import com.example.food_app.viewModel.HomeViewModel
@@ -23,6 +25,7 @@ class HomeFragment: Fragment() {
     private lateinit var binding : FragmentHomeBinding
     private lateinit var homeMvvm : HomeViewModel
     private lateinit var randomMeal : Meal
+    private lateinit var popularItemAdapter : MostPopularRecyclerAdapter
 
     companion object {
         const val MEAL_ID = "meal_id"
@@ -33,6 +36,7 @@ class HomeFragment: Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         homeMvvm = ViewModelProviders.of(this).get(HomeViewModel::class.java)
+        popularItemAdapter = MostPopularRecyclerAdapter()
     }
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -44,8 +48,33 @@ class HomeFragment: Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        prepareItemRecycleView()
         homeMvvm.getRandomMeal()
         observerRandomMeal()
+        homeMvvm.getPopularItem()
+        observerPopularItemLiveData()
+        onPopularItemClick()
+    }
+
+    private fun onPopularItemClick() {
+        popularItemAdapter.onItemClick = { categoryMeal ->
+            val intent = Intent(activity,MealActivity::class.java)
+            intent.putExtra(MEAL_ID,categoryMeal.idMeal)
+            intent.putExtra(MEAL_NAME,categoryMeal.strMeal)
+            intent.putExtra(MEAL_THUMB,categoryMeal.strMealThumb)
+            startActivity(intent)
+        }
+    }
+
+    private fun prepareItemRecycleView() {
+        binding.recViewMealsPopular.adapter = popularItemAdapter
+    }
+
+    private fun observerPopularItemLiveData() {
+        homeMvvm.observePopularItemLiveData().observe(viewLifecycleOwner, { mealList ->
+            popularItemAdapter.setMealList(mealsList = mealList!! as ArrayList)
+        })
     }
 
     private fun onRandomMealClicked() {
