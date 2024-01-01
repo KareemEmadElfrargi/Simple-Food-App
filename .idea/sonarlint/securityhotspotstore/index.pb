@@ -51,3 +51,7 @@ q
 Aapp/src/main/java/com/example/food_app/viewModel/HomeViewModel.kt,c\8\c8197c50b42837345d5990b94da38da90c4806be
 o
 ?app/src/main/java/com/example/food_app/actiivty/MainActivity.kt,4\2\428b124d76303e087868a4e37fc13f9c5dcc1f70
+o
+?app/src/main/java/com/example/food_app/actiivty/MealActivity.kt,c\8\c8d6cc91b4e69fe70e5fc09db35d7a4aabd107d7
+q
+Aapp/src/main/java/com/example/food_app/viewModel/MealViewModel.kt,d\d\dd85b58b9460cb6cd3c6e1d4aaba4d48b77b1c92
