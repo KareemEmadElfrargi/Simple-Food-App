@@ -9,8 +9,6 @@ t
 Dapp/src/main/java/com/example/food_app/fragment/FavoritesFragment.kt,d\9\d97e812340d69b3904e597ae134c61a28a136943
 u
 Eapp/src/main/java/com/example/food_app/fragment/CategoriesFragment.kt,4\0\409e0a474f0126a0a2f4911a659b65576f994600
-f
-6app/src/main/java/com/example/food_app/MainActivity.kt,9\7\973db0d7d8604e0b74e841fa24cd21ab86b07801
 ]
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 S
