@@ -6,13 +6,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.food_app.databinding.MostPopularCardBinding
-import com.example.food_app.pojo.CategoryMeals
+import com.example.food_app.pojo.MealsByCategory
 
 class MostPopularRecyclerAdapter : RecyclerView.Adapter<MostPopularRecyclerAdapter.MostPopularMealViewHolder>(){
-    private var mealsList: List<CategoryMeals> = ArrayList()
-    lateinit var onItemClick: ((CategoryMeals)->Unit)
+    private var mealsList: List<MealsByCategory> = ArrayList()
+    lateinit var onItemClick: ((MealsByCategory)->Unit)
     private lateinit var onLongItemClick:OnLongItemClick
-    fun setMealList(mealsList: List<CategoryMeals>) {
+    fun setMealList(mealsList: List<MealsByCategory>) {
         this.mealsList = mealsList
         notifyDataSetChanged()
     }
@@ -64,5 +64,5 @@ class MostPopularRecyclerAdapter : RecyclerView.Adapter<MostPopularRecyclerAdapt
 //}
 
 interface OnLongItemClick{
-    fun onItemLongClick(meal:CategoryMeals)
+    fun onItemLongClick(meal:MealsByCategory)
 }

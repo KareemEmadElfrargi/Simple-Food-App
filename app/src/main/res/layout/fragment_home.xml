@@ -148,11 +148,13 @@
                     >
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recycler_view"
+                        android:id="@+id/recycler_view_category"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="3"
                         android:orientation="vertical"
+                        tools:listitem="@layout/category_card"
                         android:scrollbars="none" />
                 </androidx.cardview.widget.CardView>
             </androidx.constraintlayout.widget.ConstraintLayout>

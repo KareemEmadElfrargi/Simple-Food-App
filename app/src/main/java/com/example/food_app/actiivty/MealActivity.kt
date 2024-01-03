@@ -90,7 +90,6 @@ class MealActivity : AppCompatActivity() {
             tvAreaInfo.visibility =  View.INVISIBLE
             imgYoutube.visibility =  View.INVISIBLE
         }
-
     }
     private fun responseCase(){
         binding.apply {
