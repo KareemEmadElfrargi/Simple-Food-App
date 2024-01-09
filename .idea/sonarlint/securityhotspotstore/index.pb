@@ -81,3 +81,7 @@ e
 5app/src/main/java/com/example/db/MealTypeConverter.kt,3\a\3a476f988046997c18101e1f70213f1667edebd4
 x
 Happ/src/main/java/com/example/food_app/viewModel/MealViewModelFactory.kt,c\9\c9ffe51720409c9bbc5ee3d89182fdbd7d1d58e6
+y
+Iapp/src/main/java/com/example/food_app/viewModel/HomelViewModelFactory.kt,c\e\ce6e4a44f14ed3ec5fc4f0f9761a2ab55270acb4
+q
+Aapp/src/main/java/com/example/food_app/Adapters/FavMealAdapter.kt,9\3\93d780a7c589aeb41cd641b3068ed57be759f4fb

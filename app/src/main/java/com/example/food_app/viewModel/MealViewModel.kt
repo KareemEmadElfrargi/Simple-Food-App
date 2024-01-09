@@ -48,4 +48,6 @@ class MealViewModel(
             mealDatabase.mealDao().deleteMeal(meal)
         }
     }
+
+
 }
