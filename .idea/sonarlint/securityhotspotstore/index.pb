@@ -53,14 +53,10 @@ o
 ?app/src/main/java/com/example/food_app/actiivty/MealActivity.kt,c\8\c8d6cc91b4e69fe70e5fc09db35d7a4aabd107d7
 q
 Aapp/src/main/java/com/example/food_app/viewModel/MealViewModel.kt,d\d\dd85b58b9460cb6cd3c6e1d4aaba4d48b77b1c92
-†
-Vapp/src/main/java/com/example/food_app/actiivty/Adapters/MostPopularRecyclerAdapter.kt,8\f\8f0bc957371752cf5cdae9694564b466b99ca034
 k
 ;app/src/main/java/com/example/food_app/pojo/CategoryList.kt,8\b\8bcbf377d95353f22326c80b68440c2b17ae16da
 g
 7app/src/main/java/com/example/food_app/pojo/Category.kt,7\e\7eda92a8da0d99eb05eefd74fa40b19ad1839f57
-}
-Mapp/src/main/java/com/example/food_app/actiivty/Adapters/CategoriesAdapter.kt,7\d\7d2b33c69251d6261cd87b5ec1a8434e279f2666
 x
 Happ/src/main/java/com/example/food_app/actiivty/CategoryMealsActivity.kt,1\c\1c88d79893937bdea80fc971f22d8a7a1e1c18f5
 t
@@ -77,3 +73,11 @@ w
 Gapp/src/main/java/com/example/food_app/Adapters/CategoryMealsAdapter.kt,3\a\3a118b3fea1c1e3ee1b987df403252f3e2c7db83
 }
 Mapp/src/main/java/com/example/food_app/Adapters/MostPopularRecyclerAdapter.kt,7\e\7ef9f8cc9463d3d939243fd73bfe6d3b5ec08518
+[
++app/src/main/java/com/example/db/MealDao.kt,7\1\71532c266f11415aa4c8652704558130dfeeaf95
+`
+0app/src/main/java/com/example/db/MealDatabase.kt,4\b\4b3476cedbd29ad431c4de5560613e8d1f215df1
+e
+5app/src/main/java/com/example/db/MealTypeConverter.kt,3\a\3a476f988046997c18101e1f70213f1667edebd4
+x
+Happ/src/main/java/com/example/food_app/viewModel/MealViewModelFactory.kt,c\9\c9ffe51720409c9bbc5ee3d89182fdbd7d1d58e6

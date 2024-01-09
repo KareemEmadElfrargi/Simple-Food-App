@@ -1,6 +1,4 @@
 
-:kotlin:S6530V"Remove this unchecked cast.(·Œñ8Ğä§éÌ1
 >kotlin:S1128"Remove this unused import.(ÊÒÅ­ùÿÿÿÿ8ĞìûçÌ1
->kotlin:S1128"Remove this unused import.(úÀÀñøÿÿÿÿ8Òä§éÌ1
 kkotlin:S6516{"LReplace explicit functional interface implementation with lambda expression.(·ıœØ8¤İèÌ1
 Kkotlin:S6518)",Replace function call with indexed accessor.(È¹ú´8ÔìûçÌ1

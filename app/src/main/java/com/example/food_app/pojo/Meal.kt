@@ -1,13 +1,17 @@
 package com.example.food_app.pojo
 
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+@Entity(tableName = "mealInformation")
 data class Meal(
     @SerializedName("dateModified")
     val dateModified: Any?,
+    @PrimaryKey
     @SerializedName("idMeal")
-    val idMeal: String?,
+    val idMeal: String,
     @SerializedName("strArea")
     val strArea: String?,
     @SerializedName("strCategory")
