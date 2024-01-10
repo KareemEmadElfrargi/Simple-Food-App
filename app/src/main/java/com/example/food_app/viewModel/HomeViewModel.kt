@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.db.MealDatabase
+import com.example.food_app.db.MealDatabase
 import com.example.food_app.pojo.Category
 import com.example.food_app.pojo.CategoryList
 import com.example.food_app.pojo.MealsByCategoryList
@@ -17,6 +17,7 @@ import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import retrofit2.http.Query
 
 class HomeViewModel(
     private val mealDatabase: MealDatabase
@@ -26,6 +27,8 @@ class HomeViewModel(
     private var popularItemLiveData = MutableLiveData<List<MealsByCategory>?>()
     private var categoriesLiveData = MutableLiveData<List<Category?>>()
     private var favoritesMealLiveData = mealDatabase.mealDao().getAllMeals()
+    private var bottomSheetMutableLiveData = MutableLiveData<Meal>()
+    private var searchMealLiveData = MutableLiveData<List<Meal>>()
 
     fun getRandomMeal(){
         RetrofitInstance.api.getRandomMeal().enqueue(object: Callback<MealList> {
@@ -95,5 +98,45 @@ class HomeViewModel(
         viewModelScope.launch {
             mealDatabase.mealDao().upsertMeal(meal)
         }
+    }
+    fun getMealById(id:String){
+        RetrofitInstance.api.getMealDetails(id).enqueue(object  : Callback<MealList>{
+            override fun onResponse(call: Call<MealList>, response: Response<MealList>) {
+                val meal = response.body()?.meals?.first()
+                meal?.let{ meal ->
+                    bottomSheetMutableLiveData.postValue(meal)
+                }
+
+            }
+
+            override fun onFailure(call: Call<MealList>, t: Throwable) {
+                Log.i("HomeViewModel", "onFailure: ${t.message.toString()}")
+            }
+
+        })
+    }
+
+    fun observeBottomSheetLiveData():LiveData<Meal>{
+        return bottomSheetMutableLiveData
+    }
+
+    fun searchMeal(searchQuery:String){
+        RetrofitInstance.api.searchMeal(searchQuery).enqueue(object :Callback<MealList>{
+            override fun onResponse(call: Call<MealList>, response: Response<MealList>) {
+                val mealList = response.body()?.meals
+                mealList?.let {
+                    searchMealLiveData.postValue(it)
+                }
+            }
+
+            override fun onFailure(call: Call<MealList>, t: Throwable) {
+                //
+            }
+
+        })
+    }
+
+    fun observeSearchMealLiveData():LiveData<List<Meal>>{
+        return searchMealLiveData
     }
 }

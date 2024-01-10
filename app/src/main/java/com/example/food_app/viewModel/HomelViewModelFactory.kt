@@ -2,7 +2,7 @@ package com.example.food_app.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.db.MealDatabase
+import com.example.food_app.db.MealDatabase
 
 class HomelViewModelFactory(
     private val mealDatabase: MealDatabase

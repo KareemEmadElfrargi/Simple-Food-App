@@ -11,19 +11,13 @@ import com.example.food_app.pojo.MealsByCategory
 class MostPopularRecyclerAdapter : RecyclerView.Adapter<MostPopularRecyclerAdapter.MostPopularMealViewHolder>(){
     private var mealsList: List<MealsByCategory> = ArrayList()
     lateinit var onItemClick: ((MealsByCategory)->Unit)
-    private lateinit var onLongItemClick:OnLongItemClick
+    var onLongItemClick:((MealsByCategory)->Unit)?=null
+
     fun setMealList(mealsList: List<MealsByCategory>) {
         this.mealsList = mealsList
         notifyDataSetChanged()
     }
 
-//    fun setOnClickListener(onItemClick: OnItemClick){
-//        this.onItemClick = onItemClick
-//    }
-
-    fun setOnLongCLickListener(onLongItemClick:OnLongItemClick){
-        this.onLongItemClick = onLongItemClick
-    }
 
     class MostPopularMealViewHolder(val binding: MostPopularCardBinding) :
         RecyclerView.ViewHolder(binding.root)
@@ -47,7 +41,7 @@ class MostPopularRecyclerAdapter : RecyclerView.Adapter<MostPopularRecyclerAdapt
 
         holder.itemView.setOnLongClickListener(object : View.OnLongClickListener{
             override fun onLongClick(p0: View?): Boolean {
-                onLongItemClick.onItemLongClick(mealsList[i])
+                onLongItemClick?.invoke(mealsList[position])
                 return true
             }
 

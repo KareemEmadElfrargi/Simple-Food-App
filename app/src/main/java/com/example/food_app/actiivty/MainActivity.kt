@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
-import com.example.db.MealDatabase
+import com.example.food_app.db.MealDatabase
 import com.example.food_app.R
 import com.example.food_app.databinding.ActivityMainBinding
 import com.example.food_app.viewModel.HomeViewModel

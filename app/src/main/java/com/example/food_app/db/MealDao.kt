@@ -1,4 +1,4 @@
-package com.example.db
+package com.example.food_app.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao

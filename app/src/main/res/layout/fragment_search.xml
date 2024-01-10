@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.SearchFragment">
+
+<LinearLayout
+    android:id="@+id/linearSearch"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+    <EditText
+        android:id="@+id/ed_search_box"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Search Meals"
+        android:layout_weight="1"/>
+    <ImageView
+        android:id="@+id/im_search_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_search"
+
+        />
+</LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSearchMeal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearSearch"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="5dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

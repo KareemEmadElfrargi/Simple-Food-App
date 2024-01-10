@@ -1,4 +1,4 @@
-package com.example.db
+package com.example.food_app.db
 
 import android.content.Context
 import androidx.room.Database
@@ -11,13 +11,13 @@ import com.example.food_app.pojo.Meal
 @Database(entities = [Meal::class], version = 1)
 @TypeConverters(MealTypeConverter::class)
 abstract class MealDatabase : RoomDatabase() {
-    abstract fun mealDao():MealDao
+    abstract fun mealDao(): MealDao
 
     companion object {
         var INSTANCE : MealDatabase?= null
         @Synchronized
-        fun getInstance(context:Context):MealDatabase{
-            if (INSTANCE==null){
+        fun getInstance(context:Context): MealDatabase {
+            if (INSTANCE ==null){
                 INSTANCE = Room.databaseBuilder(
                     context,
                     MealDatabase::class.java,

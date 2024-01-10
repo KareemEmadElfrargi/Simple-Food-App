@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.db.MealDatabase
+import com.example.food_app.db.MealDatabase
 import com.example.food_app.pojo.Meal
 import com.example.food_app.pojo.MealList
 import com.example.food_app.retrofit.RetrofitInstance
