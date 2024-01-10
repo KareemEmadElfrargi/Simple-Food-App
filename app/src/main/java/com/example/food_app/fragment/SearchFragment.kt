@@ -1,6 +1,7 @@
 package com.example.food_app.fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -56,13 +57,14 @@ class SearchFragment : Fragment() {
 
     private fun observeSearchMealsLiveData() {
         viewModel.observeSearchMealLiveData().observe(viewLifecycleOwner, Observer { mealList ->
+            Log.i("Search",mealList.toString())
             searchAdapter.differ.submitList(mealList)
 
         })
     }
 
     private fun searchMeals() {
-        val searchQuery = binding.edSearchBox.text.toString().trim()
+        val searchQuery = binding.edSearchBox.text.toString()
         if (searchQuery.isNotEmpty()){
             viewModel.searchMeal(searchQuery)
         }
